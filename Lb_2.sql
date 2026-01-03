@@ -58,3 +58,66 @@ WHERE Eage <= 20;
 
 
 
+
+-- Retrieve information of those students who lives in Ktm and whose
+-- age is above 22 or whose salary is greater than 10500.
+SELECT * FROM Employee 
+WHERE Eaddress = 'Ktm' 
+AND (Eage > 22 OR Esalary > 10500);
+
+
+-- Change the column eid to EMP-ID.
+ALTER TABLE Employee 
+RENAME COLUMN eid TO `EMP-ID`;
+
+
+
+-- Change the data type of eid from integer to varchar.
+ALTER TABLE Employee 
+MODIFY `EMP-ID` VARCHAR(20);
+
+-- Increase the age of employee Samipa by 2.
+UPDATE Employee 
+SET Eage = Eage + 2 
+WHERE Ename = 'Samipa';
+
+
+-- Delete those employees whose address is Bkt or salary is greater
+-- than 15000.
+DELETE FROM Employee 
+WHERE Eaddress = 'Bkt' OR Esalary > 15000;
+
+
+-- Increase the salary of all employees by 7 percentages.
+UPDATE Employee 
+SET Esalary = Esalary * 1.07;
+
+
+-- Now increase the salary of employees by 5% who earn more than
+-- 15000, else increase it by 10%.
+UPDATE Employee
+SET Esalary = CASE 
+    WHEN Esalary > 15000 THEN Esalary * 1.05
+    ELSE Esalary * 1.10
+END;
+
+
+-- Display employees whose salary is in the range 6999 and 11998.
+SELECT * FROM Employee 
+WHERE Esalary BETWEEN 6999 AND 11998;
+
+
+
+-- Display employees who do not live in Ktm.
+SELECT * FROM Employee 
+WHERE Eaddress != 'Ktm';
+
+
+-- Update the database such that Uday now lives in NPJ.
+UPDATE Employee 
+SET Eaddress = 'NPJ' 
+WHERE Ename = 'Uday';
+
+
+
+
