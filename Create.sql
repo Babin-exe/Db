@@ -34,3 +34,10 @@ USE Stuenets_Info;
 ALTER TABLE Student 
 RENAME COLUMN SNO TO student_id;
 
+
+-- Change the data type of Student_id to varchar.
+USE Stuenets_Info;
+
+ALTER TABLE Student 
+MODIFY student_id VARCHAR(20);
+
