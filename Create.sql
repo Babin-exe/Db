@@ -47,3 +47,16 @@ USE Stuenets_Info;
 RENAME TABLE Student TO KCC_Students;
 
 
+-- Fill the table with some information.
+
+USE Stuenets_Info;
+INSERT INTO KCC_Students (student_id, Sname, Saddress, SDOB)
+VALUES 
+('KCC-101', 'A', '123 Maple Avenue, NY', '2004-05-15'),
+('KCC-102', 'B', '456 Oak Street, CA', '2003-11-22'),
+('KCC-103', 'C', '789 Pine Road, TX', '2005-01-30'),
+('KCC-104', 'D', '321 Elm Blvd, FL', '2004-08-12'),
+('KCC-105', 'E', '654 Cedar Lane, WA', '2002-12-05');
+
+
+
