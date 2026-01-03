@@ -58,5 +58,9 @@ VALUES
 ('KCC-104', 'D', '321 Elm Blvd, FL', '2004-08-12'),
 ('KCC-105', 'E', '654 Cedar Lane, WA', '2002-12-05');
 
+-- Delete all data except for the table.
+USE Stuenets_Info;
+TRUNCATE TABLE KCC_Students;
+
 
 
