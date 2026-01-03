@@ -62,5 +62,13 @@ VALUES
 USE Stuenets_Info;
 TRUNCATE TABLE KCC_Students;
 
+-- Remove the whole table.
+USE Stuenets_Info;
+DROP TABLE KCC_Students;
+
+-- Remove the Database.
+DROP DATABASE Students_Info;
+
+
 
 
