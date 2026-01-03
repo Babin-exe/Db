@@ -51,7 +51,22 @@ ORDER BY ename ASC
 LIMIT 1;
 
 
+-- Display the last name of employees
+SELECT ename 
+FROM Employee 
+ORDER BY ename DESC 
+LIMIT 1;
 
+
+ -- Find the name of employees who has the highest salary
+SELECT ename
+FROM Employee
+WHERE salary = (SELECT MAX(salary) FROM Employee);
+
+-- Find the name of employees who has the lowest salary
+SELECT ename
+FROM Employee
+WHERE salary = (SELECT MIN(salary) FROM Employee);
 
 
 
