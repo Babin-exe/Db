@@ -26,3 +26,11 @@ USE Stuenets_Info;
 
 ALTER TABLE Student 
 DROP COLUMN Sage;
+
+-- Change the column name SNO to student_id.
+
+USE Stuenets_Info;
+
+ALTER TABLE Student 
+RENAME COLUMN SNO TO student_id;
+
