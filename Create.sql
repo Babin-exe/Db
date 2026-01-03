@@ -41,3 +41,9 @@ USE Stuenets_Info;
 ALTER TABLE Student 
 MODIFY student_id VARCHAR(20);
 
+-- Change the name of the existing table to KCC_Students.
+
+USE Stuenets_Info;
+RENAME TABLE Student TO KCC_Students;
+
+
